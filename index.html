@@ -1,13 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080d18">
-  <title>Join Our Telegram Channel</title>
   <meta name="description" content="Join our Telegram channel for updates and exclusive content.">
+  <title>Join Our Telegram Channel</title>
 
   <style>
+    :root {
+      --bg: #080d18;
+      --panel: #111d30;
+      --blue: #229ed9;
+      --text: #f5f7ff;
+      --muted: #aabbd1;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -16,157 +25,257 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 20px;
     }
 
     body {
       font-family: Arial, sans-serif;
-      color: #f5f7ff;
-      background: #080d18;
+      color: var(--text);
+      background: var(--bg);
       line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      -webkit-tap-highlight-color: transparent;
     }
 
     .container {
       width: min(92%, 720px);
-      margin: auto;
+      margin-inline: auto;
       text-align: center;
     }
 
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 45px 0;
+      min-height: 88vh;
+      display: grid;
+      place-items: center;
+      padding: 55px 0;
       background:
-        radial-gradient(ellipse at top, #12304e 0%, transparent 60%),
-        #080d18;
+        radial-gradient(ellipse at 50% 0%, #16446a 0%, transparent 65%),
+        var(--bg);
     }
 
     .card {
-      padding: 36px 24px;
-      border: 1px solid #24364f;
+      padding: 34px 22px;
+      border: 1px solid #29415e;
       border-radius: 24px;
-      background: rgba(16, 27, 45, 0.9);
-      box-shadow: 0 20px 70px #0005;
+      background: linear-gradient(145deg, #14243a, #0c1423);
+      box-shadow: 0 20px 65px #0006;
+      animation: rise .8s ease both;
     }
 
     .telegram-icon {
-      width: 82px;
-      height: 82px;
-      margin: 0 auto 20px;
+      width: 72px;
+      height: 72px;
       display: grid;
       place-items: center;
+      margin: 0 auto 20px;
       border-radius: 50%;
-      background: #229ed9;
-      font-size: 40px;
+      background: var(--blue);
+      box-shadow: 0 0 32px #229ed955;
+      font-size: 35px;
+      animation: float 3s ease-in-out infinite;
     }
 
     h1 {
-      font-size: clamp(28px, 6vw, 42px);
+      font-size: clamp(27px, 6vw, 42px);
       line-height: 1.2;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
     }
 
     p {
-      color: #b6c3d8;
-      margin-bottom: 24px;
+      color: var(--muted);
+      margin-bottom: 20px;
     }
 
     .button {
-      display: inline-block;
-      width: 100%;
-      max-width: 360px;
-      padding: 15px 22px;
-      margin: 8px 0;
-      border: 0;
-      border-radius: 12px;
-      background: #229ed9;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      width: auto;
+      max-width: 100%;
+      padding: 10px 18px;
+      margin: 5px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      background: var(--blue);
       color: white;
-      font-size: 17px;
-      font-weight: bold;
+      font-size: 14px;
+      font-weight: 700;
       text-decoration: none;
       cursor: pointer;
-      transition: transform .2s, background .2s;
+      transition: transform .2s, background .2s, box-shadow .2s;
     }
 
     .button:hover {
       background: #168ac2;
       transform: translateY(-2px);
+      box-shadow: 0 6px 22px #229ed944;
     }
 
-    .secondary {
-      background: #202e43;
-      border: 1px solid #344760;
+    .button:focus-visible {
+      outline: 2px solid white;
+      outline-offset: 3px;
     }
 
-    .secondary:hover {
-      background: #2b405c;
+    .button-small {
+      padding: 9px 15px;
+      font-size: 13px;
+      border-radius: 9px;
     }
 
     .ads-section {
-      padding: 65px 0 80px;
-      background: #0c1321;
-      scroll-margin-top: 20px;
+      padding: 48px 0 95px;
+      background: #0b1321;
     }
 
-    .ads-section h2 {
-      margin-bottom: 12px;
-      font-size: 28px;
+    .section-intro {
+      margin-bottom: 24px;
     }
 
     .ad-slot {
+      width: 100%;
+      min-height: 100px;
       display: flex;
-      min-height: 180px;
-      align-items: center;
       justify-content: center;
-      margin: 28px auto;
-      padding: 20px;
-      border: 1px dashed #43516a;
-      border-radius: 14px;
-      background: #111b2c;
-      color: #8393ac;
-      overflow: hidden;
+      align-items: center;
+      margin: 18px auto;
+      padding: 12px 0;
+      border: 1px solid #24364c;
+      border-radius: 12px;
+      background: #101b2b;
+      overflow-x: auto;
+      overflow-y: hidden;
+      animation: rise .7s ease both;
     }
 
-    .ad-slot ins,
     .ad-slot iframe {
+      max-width: none;
+      border: 0;
+    }
+
+    .ad-slot ins {
       max-width: 100%;
     }
 
     .bottom-join {
-      padding: 30px 18px;
-      margin-top: 36px;
+      padding: 25px 16px;
+      margin-top: 28px;
+      border: 1px solid #29415e;
       border-radius: 18px;
-      background: #142740;
+      background: linear-gradient(145deg, #172f4b, #101c2e);
     }
 
-    footer {
-      padding: 24px 12px;
+    .bottom-join p {
+      margin-bottom: 12px;
+    }
+
+    .footer {
+      padding: 25px 12px 95px;
       color: #8190a8;
-      font-size: 13px;
+      font-size: 12px;
     }
 
-    footer a {
+    .footer a {
       color: #8dcfff;
-      margin: 0 8px;
+      margin: 0 7px;
+    }
+
+    /* Compact, fixed join button for mobile visitors */
+    .sticky-join {
+      position: fixed;
+      z-index: 100;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: max-content;
+      max-width: calc(100% - 28px);
+      padding: 10px 19px;
+      border-radius: 999px;
+      background: var(--blue);
+      color: white;
+      box-shadow: 0 5px 24px #0009;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      animation: rise .7s ease both;
+    }
+
+    .sticky-join:hover {
+      background: #168ac2;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
     }
 
     @media (max-width: 480px) {
+      .hero {
+        min-height: 78vh;
+        padding: 30px 0;
+      }
+
       .card {
-        padding: 30px 18px;
+        padding: 28px 17px;
+      }
+
+      .telegram-icon {
+        width: 62px;
+        height: 62px;
+        font-size: 30px;
+      }
+
+      .ads-section {
+        padding-top: 35px;
       }
 
       .ad-slot {
-        min-height: 150px;
+        min-height: 90px;
+      }
+
+      .bottom-join {
+        padding: 22px 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
       }
     }
   </style>
+
+  <!-- Adsterra popup script: included once -->
+  <script
+    data-cfasync="false"
+    src="https://abscloud.org/1/9c4f000fb230f333d9885ed2b281efb1">
+  </script>
 </head>
 
-<body>
+<body id="top">
 
   <main>
-    <!-- TOP SECTION -->
     <section class="hero">
       <div class="container">
         <div class="card">
@@ -175,83 +284,83 @@
           <h1>Join Our Telegram Channel</h1>
 
           <p>
-            Get the latest updates, useful content, and announcements
+            Get updates, useful content and announcements
             directly on Telegram.
           </p>
 
-          <!-- This button scrolls to the bottom section -->
           <a class="button" href="#continue">
-            Join Telegram ↓
+            ↓ Join Now
           </a>
 
-          <p style="font-size:13px; margin:18px 0 0;">
-            Continue below to access our channel.
+          <p style="font-size:12px; margin:14px 0 0;">
+            Continue below to access the channel.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- ADS AND BOTTOM SECTION -->
     <section class="ads-section" id="continue">
       <div class="container">
-
         <h2>Continue to Telegram</h2>
-        <p>Check out the content below before continuing.</p>
+        <p class="section-intro">
+          Explore the page, then continue to our channel.
+        </p>
 
-        <!-- AD SLOT 1: Insert approved ad-network code here -->
+        <!-- Adsterra banner placement 1 -->
         <div class="ad-slot">
-          <span><script>
-  atOptions = {
-    'key' : '5812fabf708823d47e85c2f16306e7c7',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://bauval.org/22/5812fabf708823d47e85c2f16306e7c7"></script></span>
+          <script>
+            atOptions = {
+              'key': '5812fabf708823d47e85c2f16306e7c7',
+              'format': 'iframe',
+              'height': 60,
+              'width': 468,
+              'params': {}
+            };
+          </script>
+          <script src="https://bauval.org/22/5812fabf708823d47e85c2f16306e7c7"></script>
         </div>
 
-        <!-- AD SLOT 2: Insert approved ad-network code here -->
+        <!-- Adsterra banner placement 2 -->
         <div class="ad-slot">
-          <span><script>
-  atOptions = {
-    'key' : '5812fabf708823d47e85c2f16306e7c7',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://bauval.org/22/5812fabf708823d47e85c2f16306e7c7"></script></span>
+          <script>
+            atOptions = {
+              'key': '5812fabf708823d47e85c2f16306e7c7',
+              'format': 'iframe',
+              'height': 60,
+              'width': 468,
+              'params': {}
+            };
+          </script>
+          <script src="https://bauval.org/22/5812fabf708823d47e85c2f16306e7c7"></script>
         </div>
 
         <div class="bottom-join">
           <h2>Ready to Join?</h2>
-          <p>Open our official Telegram channel below.</p>
+          <p>Open our Telegram channel below.</p>
 
-          <!-- REPLACE THIS URL WITH YOUR TELEGRAM CHANNEL -->
+          <!-- Original Telegram invite link preserved -->
           <a
-            <script data-cfasync="false" src="https://abscloud.org/1/9c4f000fb230f333d9885ed2b281efb1"></script>
-            class="button"
+            class="button button-small"
             href="https://t.me/+ThzXE_l-eJs4Yjk9"
             target="_blank"
             rel="noopener noreferrer"
           >
-            ✈ Join Telegram Channel
+            ✈ Join Now
           </a>
         </div>
-
       </div>
     </section>
   </main>
 
-  <footer class="container">
+  <footer class="container footer">
     <p>Independent channel landing page.</p>
-    <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
-      Back to top
-    </a>
+    <a href="#top">Back to top ↑</a>
   </footer>
+
+  <!-- Persistent shortcut to the Telegram section -->
+  <a class="sticky-join" href="#continue">
+    ↓ Join Now
+  </a>
 
 </body>
 </html>
