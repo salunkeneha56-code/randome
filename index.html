@@ -32,7 +32,9 @@
       display: grid;
       place-items: center;
       padding: 38px 0;
-      background: radial-gradient(ellipse at top, #17466c, transparent 65%), #080d18;
+      background:
+        radial-gradient(ellipse at top, #17466c, transparent 65%),
+        #080d18;
     }
 
     .card {
@@ -57,9 +59,21 @@
       animation: float 3s ease-in-out infinite;
     }
 
-    h1 { font-size: clamp(27px, 6vw, 40px); line-height: 1.2; margin-bottom: 12px; }
-    h2 { font-size: 23px; margin-bottom: 8px; }
-    p { color: #b6c3d8; margin-bottom: 16px; }
+    h1 {
+      font-size: clamp(27px, 6vw, 40px);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #b6c3d8;
+      margin-bottom: 16px;
+    }
 
     .btn {
       display: inline-flex;
@@ -71,7 +85,7 @@
       padding: 10px 17px;
       margin: 5px;
       background: #229ed9;
-      color: white;
+      color: #fff;
       font-size: 14px;
       font-weight: 700;
       text-decoration: none;
@@ -79,8 +93,15 @@
       transition: background .2s, transform .2s;
     }
 
-    .btn:hover { background: #168ac2; transform: translateY(-2px); }
-    .btn-small { padding: 9px 15px; font-size: 13px; }
+    .btn:hover {
+      background: #168ac2;
+      transform: translateY(-2px);
+    }
+
+    .btn-small {
+      padding: 10px 16px;
+      font-size: 13px;
+    }
 
     .ads-section {
       padding: 38px 0 90px;
@@ -111,7 +132,10 @@
       background: #101b2b;
     }
 
-    .ad-slot iframe { border: 0; }
+    .ad-slot iframe {
+      border: 0;
+      flex-shrink: 0;
+    }
 
     .bottom-join {
       margin-top: 24px;
@@ -121,7 +145,9 @@
       background: linear-gradient(145deg, #172f4b, #101c2e);
     }
 
-    .bottom-join p { margin-bottom: 12px; }
+    .bottom-join p {
+      margin-bottom: 12px;
+    }
 
     .footer {
       padding: 22px 12px 85px;
@@ -129,7 +155,10 @@
       color: #8190a8;
     }
 
-    /* This button scrolls to the bottom join section */
+    .footer a {
+      color: #8dcfff;
+    }
+
     .sticky-join {
       position: fixed;
       z-index: 100;
@@ -174,9 +203,11 @@
     }
   </style>
 
-  <!-- Existing popup script: included once -->
-  <script data-cfasync="false"
-    src="https://abscloud.org/1/9c4f000fb230f333d9885ed2b281efb1"></script>
+  <!-- Existing popup script, included once -->
+  <script
+    data-cfasync="false"
+    src="https://abscloud.org/1/9c4f000fb230f333d9885ed2b281efb1">
+  </script>
 </head>
 
 <body id="top">
@@ -186,11 +217,20 @@
       <div class="container">
         <div class="card">
           <div class="telegram-icon" aria-hidden="true">➤</div>
-          <h1>Join Our Telegram Channel</h1>
-          <p>Get updates, useful content and announcements directly on Telegram.</p>
 
+          <h1>Join Our Telegram Channel</h1>
+
+          <p>
+            Get updates, useful content and announcements
+            directly on Telegram.
+          </p>
+
+          <!-- Top button scrolls down -->
           <a class="btn" href="#continue">↓ Join Now</a>
-          <p style="font-size:12px; margin:12px 0 0;">Scroll down to continue to our channel.</p>
+
+          <p style="font-size:12px; margin:12px 0 0;">
+            Continue below to access our channel.
+          </p>
         </div>
       </div>
     </section>
@@ -200,7 +240,7 @@
         <h2>Continue to Telegram</h2>
         <p>Explore the page, then join our channel.</p>
 
-        <!-- Banner placement 1: existing code -->
+        <!-- AD SLOT 1: Existing Adsterra banner -->
         <div class="ad-label">Advertisement</div>
         <div class="ad-slot">
           <script>
@@ -215,30 +255,25 @@
           <script src="https://bauval.org/22/5812fabf708823d47e85c2f16306e7c7"></script>
         </div>
 
-        <!-- Banner placement 2: replace with a separate code from Adsterra -->
+        <!-- AD SLOT 2: Insert a separate approved ad code here -->
         <div class="ad-label">Advertisement</div>
-        <div class="ad-slot">
-          <!-- Add your second, unique Adsterra banner code here.
-               Do not duplicate the first unit's code. -->
-        </div>
+        <div class="ad-slot" id="ad-slot-2"></div>
 
-        <!-- Optional additional placements: add unique approved ad codes here -->
+        <!-- AD SLOT 3: Insert another separate approved ad code here -->
         <div class="ad-label">Advertisement</div>
-        <div class="ad-slot">
-          <!-- Add a third unique approved ad code here if available. -->
-        </div>
+        <div class="ad-slot" id="ad-slot-3"></div>
 
+        <!-- Corrected bottom join button -->
         <div class="bottom-join" id="join">
           <h2>Ready to Join?</h2>
           <p>Tap below to open our Telegram channel.</p>
 
-          <!-- Original Telegram invite URL preserved -->
-          <a class="btn btn-small"
-             href="https://t.me/+ThzXE_l-eJs4Yjk9"
-             target="_blank"
-             rel="noopener noreferrer">
-            ✈ Join Now
-          </a>
+          <a
+            class="btn btn-small"
+            href="https://t.me/+ThzXE_l-eJs4Yjk9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >✈ Join Telegram Channel</a>
         </div>
       </div>
     </section>
@@ -246,10 +281,10 @@
 
   <footer class="container footer">
     <p>Independent channel landing page.</p>
-    <a href="#top" style="color:#8dcfff;">Back to top ↑</a>
+    <a href="#top">Back to top ↑</a>
   </footer>
 
-  <!-- Fixed button scrolls to the bottom Join Now button -->
+  <!-- Floating button scrolls to the bottom join card -->
   <a class="sticky-join" href="#join">↓ Join Now</a>
 
 </body>
