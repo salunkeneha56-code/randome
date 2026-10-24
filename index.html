@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
+  <title>Join Our Telegram Channel</title>
+  <meta name="description" content="Join our Telegram channel for updates and exclusive content.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #f5f7ff;
+      background: #080d18;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(92%, 720px);
+      margin: auto;
+      text-align: center;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 45px 0;
+      background:
+        radial-gradient(ellipse at top, #12304e 0%, transparent 60%),
+        #080d18;
+    }
+
+    .card {
+      padding: 36px 24px;
+      border: 1px solid #24364f;
+      border-radius: 24px;
+      background: rgba(16, 27, 45, 0.9);
+      box-shadow: 0 20px 70px #0005;
+    }
+
+    .telegram-icon {
+      width: 82px;
+      height: 82px;
+      margin: 0 auto 20px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #229ed9;
+      font-size: 40px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 6vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: #b6c3d8;
+      margin-bottom: 24px;
+    }
+
+    .button {
+      display: inline-block;
+      width: 100%;
+      max-width: 360px;
+      padding: 15px 22px;
+      margin: 8px 0;
+      border: 0;
+      border-radius: 12px;
+      background: #229ed9;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .2s, background .2s;
+    }
+
+    .button:hover {
+      background: #168ac2;
+      transform: translateY(-2px);
+    }
+
+    .secondary {
+      background: #202e43;
+      border: 1px solid #344760;
+    }
+
+    .secondary:hover {
+      background: #2b405c;
+    }
+
+    .ads-section {
+      padding: 65px 0 80px;
+      background: #0c1321;
+      scroll-margin-top: 20px;
+    }
+
+    .ads-section h2 {
+      margin-bottom: 12px;
+      font-size: 28px;
+    }
+
+    .ad-slot {
+      display: flex;
+      min-height: 180px;
+      align-items: center;
+      justify-content: center;
+      margin: 28px auto;
+      padding: 20px;
+      border: 1px dashed #43516a;
+      border-radius: 14px;
+      background: #111b2c;
+      color: #8393ac;
+      overflow: hidden;
+    }
+
+    .ad-slot ins,
+    .ad-slot iframe {
+      max-width: 100%;
+    }
+
+    .bottom-join {
+      padding: 30px 18px;
+      margin-top: 36px;
+      border-radius: 18px;
+      background: #142740;
+    }
+
+    footer {
+      padding: 24px 12px;
+      color: #8190a8;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #8dcfff;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 30px 18px;
+      }
+
+      .ad-slot {
+        min-height: 150px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <!-- TOP SECTION -->
+    <section class="hero">
+      <div class="container">
+        <div class="card">
+          <div class="telegram-icon" aria-hidden="true">➤</div>
+
+          <h1>Join Our Telegram Channel</h1>
+
+          <p>
+            Get the latest updates, useful content, and announcements
+            directly on Telegram.
+          </p>
+
+          <!-- This button scrolls to the bottom section -->
+          <a class="button" href="#continue">
+            Join Telegram ↓
+          </a>
+
+          <p style="font-size:13px; margin:18px 0 0;">
+            Continue below to access our channel.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADS AND BOTTOM SECTION -->
+    <section class="ads-section" id="continue">
+      <div class="container">
+
+        <h2>Continue to Telegram</h2>
+        <p>Check out the content below before continuing.</p>
+
+        <!-- AD SLOT 1: Insert approved ad-network code here -->
+        <div class="ad-slot">
+          <span>Advertisement</span>
+        </div>
+
+        <!-- AD SLOT 2: Insert approved ad-network code here -->
+        <div class="ad-slot">
+          <span>Advertisement</span>
+        </div>
+
+        <div class="bottom-join">
+          <h2>Ready to Join?</h2>
+          <p>Open our official Telegram channel below.</p>
+
+          <!-- REPLACE THIS URL WITH YOUR TELEGRAM CHANNEL -->
+          <a
+            class="button"
+            href="https://t.me/+ThzXE_l-eJs4Yjk9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ✈ Join Telegram Channel
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>Independent channel landing page.</p>
+    <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+      Back to top
+    </a>
+  </footer>
+
+</body>
+</html>
