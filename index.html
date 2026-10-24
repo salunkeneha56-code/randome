@@ -9,218 +9,148 @@
   <title>Join Our Telegram Channel</title>
 
   <style>
-    :root {
-      --bg: #080d18;
-      --panel: #111d30;
-      --blue: #229ed9;
-      --text: #f5f7ff;
-      --muted: #aabbd1;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 20px;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
+      background: #080d18;
+      color: #f5f7ff;
       line-height: 1.6;
       overflow-x: hidden;
     }
 
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
     .container {
-      width: min(92%, 720px);
-      margin-inline: auto;
+      width: min(94%, 720px);
+      margin: auto;
       text-align: center;
     }
 
     .hero {
-      min-height: 88vh;
+      min-height: 78vh;
       display: grid;
       place-items: center;
-      padding: 55px 0;
-      background:
-        radial-gradient(ellipse at 50% 0%, #16446a 0%, transparent 65%),
-        var(--bg);
+      padding: 38px 0;
+      background: radial-gradient(ellipse at top, #17466c, transparent 65%), #080d18;
     }
 
     .card {
-      padding: 34px 22px;
+      padding: 30px 20px;
       border: 1px solid #29415e;
-      border-radius: 24px;
+      border-radius: 22px;
       background: linear-gradient(145deg, #14243a, #0c1423);
-      box-shadow: 0 20px 65px #0006;
-      animation: rise .8s ease both;
+      box-shadow: 0 20px 60px #0007;
+      animation: fadeUp .7s ease both;
     }
 
     .telegram-icon {
-      width: 72px;
-      height: 72px;
+      width: 66px;
+      height: 66px;
+      margin: 0 auto 17px;
       display: grid;
       place-items: center;
-      margin: 0 auto 20px;
       border-radius: 50%;
-      background: var(--blue);
-      box-shadow: 0 0 32px #229ed955;
-      font-size: 35px;
+      background: #229ed9;
+      box-shadow: 0 0 28px #229ed955;
+      font-size: 32px;
       animation: float 3s ease-in-out infinite;
     }
 
-    h1 {
-      font-size: clamp(27px, 6vw, 42px);
-      line-height: 1.2;
-      margin-bottom: 14px;
-    }
+    h1 { font-size: clamp(27px, 6vw, 40px); line-height: 1.2; margin-bottom: 12px; }
+    h2 { font-size: 23px; margin-bottom: 8px; }
+    p { color: #b6c3d8; margin-bottom: 16px; }
 
-    h2 {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    p {
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
-
-    .button {
+    .btn {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       gap: 7px;
-      width: auto;
-      max-width: 100%;
-      padding: 10px 18px;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 17px;
       margin: 5px;
-      border: 1px solid transparent;
-      border-radius: 10px;
-      background: var(--blue);
+      background: #229ed9;
       color: white;
       font-size: 14px;
       font-weight: 700;
       text-decoration: none;
       cursor: pointer;
-      transition: transform .2s, background .2s, box-shadow .2s;
+      transition: background .2s, transform .2s;
     }
 
-    .button:hover {
-      background: #168ac2;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 22px #229ed944;
-    }
-
-    .button:focus-visible {
-      outline: 2px solid white;
-      outline-offset: 3px;
-    }
-
-    .button-small {
-      padding: 9px 15px;
-      font-size: 13px;
-      border-radius: 9px;
-    }
+    .btn:hover { background: #168ac2; transform: translateY(-2px); }
+    .btn-small { padding: 9px 15px; font-size: 13px; }
 
     .ads-section {
-      padding: 48px 0 95px;
-      background: #0b1321;
+      padding: 38px 0 90px;
+      background: #0c1321;
+      scroll-margin-top: 16px;
     }
 
-    .section-intro {
-      margin-bottom: 24px;
+    .ad-label {
+      margin: 18px 0 5px;
+      color: #7e91ab;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
     }
 
     .ad-slot {
       width: 100%;
-      min-height: 100px;
+      min-height: 80px;
+      margin: 8px auto 20px;
+      padding: 8px 0;
       display: flex;
-      justify-content: center;
       align-items: center;
-      margin: 18px auto;
-      padding: 12px 0;
-      border: 1px solid #24364c;
-      border-radius: 12px;
-      background: #101b2b;
+      justify-content: center;
       overflow-x: auto;
       overflow-y: hidden;
-      animation: rise .7s ease both;
+      border: 1px solid #22334a;
+      border-radius: 10px;
+      background: #101b2b;
     }
 
-    .ad-slot iframe {
-      max-width: none;
-      border: 0;
-    }
-
-    .ad-slot ins {
-      max-width: 100%;
-    }
+    .ad-slot iframe { border: 0; }
 
     .bottom-join {
-      padding: 25px 16px;
-      margin-top: 28px;
+      margin-top: 24px;
+      padding: 24px 14px;
       border: 1px solid #29415e;
-      border-radius: 18px;
+      border-radius: 17px;
       background: linear-gradient(145deg, #172f4b, #101c2e);
     }
 
-    .bottom-join p {
-      margin-bottom: 12px;
-    }
+    .bottom-join p { margin-bottom: 12px; }
 
     .footer {
-      padding: 25px 12px 95px;
-      color: #8190a8;
+      padding: 22px 12px 85px;
       font-size: 12px;
+      color: #8190a8;
     }
 
-    .footer a {
-      color: #8dcfff;
-      margin: 0 7px;
-    }
-
-    /* Compact, fixed join button for mobile visitors */
+    /* This button scrolls to the bottom join section */
     .sticky-join {
       position: fixed;
       z-index: 100;
-      bottom: 12px;
       left: 50%;
+      bottom: 12px;
       transform: translateX(-50%);
-      width: max-content;
-      max-width: calc(100% - 28px);
+      display: inline-block;
+      white-space: nowrap;
       padding: 10px 19px;
       border-radius: 999px;
-      background: var(--blue);
-      color: white;
-      box-shadow: 0 5px 24px #0009;
+      background: #229ed9;
+      color: #fff;
       text-decoration: none;
       font-size: 13px;
-      font-weight: bold;
-      animation: rise .7s ease both;
+      font-weight: 700;
+      box-shadow: 0 5px 22px #0009;
     }
 
-    .sticky-join:hover {
-      background: #168ac2;
-    }
-
-    @keyframes rise {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes float {
@@ -229,32 +159,10 @@
     }
 
     @media (max-width: 480px) {
-      .hero {
-        min-height: 78vh;
-        padding: 30px 0;
-      }
-
-      .card {
-        padding: 28px 17px;
-      }
-
-      .telegram-icon {
-        width: 62px;
-        height: 62px;
-        font-size: 30px;
-      }
-
-      .ads-section {
-        padding-top: 35px;
-      }
-
-      .ad-slot {
-        min-height: 90px;
-      }
-
-      .bottom-join {
-        padding: 22px 12px;
-      }
+      .hero { min-height: 72vh; }
+      .card { padding: 26px 15px; }
+      .ad-slot { justify-content: flex-start; }
+      .bottom-join { padding: 22px 12px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -266,11 +174,9 @@
     }
   </style>
 
-  <!-- Adsterra popup script: included once -->
-  <script
-    data-cfasync="false"
-    src="https://abscloud.org/1/9c4f000fb230f333d9885ed2b281efb1">
-  </script>
+  <!-- Existing popup script: included once -->
+  <script data-cfasync="false"
+    src="https://abscloud.org/1/9c4f000fb230f333d9885ed2b281efb1"></script>
 </head>
 
 <body id="top">
@@ -280,21 +186,11 @@
       <div class="container">
         <div class="card">
           <div class="telegram-icon" aria-hidden="true">➤</div>
-
           <h1>Join Our Telegram Channel</h1>
+          <p>Get updates, useful content and announcements directly on Telegram.</p>
 
-          <p>
-            Get updates, useful content and announcements
-            directly on Telegram.
-          </p>
-
-          <a class="button" href="#continue">
-            ↓ Join Now
-          </a>
-
-          <p style="font-size:12px; margin:14px 0 0;">
-            Continue below to access the channel.
-          </p>
+          <a class="btn" href="#continue">↓ Join Now</a>
+          <p style="font-size:12px; margin:12px 0 0;">Scroll down to continue to our channel.</p>
         </div>
       </div>
     </section>
@@ -302,11 +198,10 @@
     <section class="ads-section" id="continue">
       <div class="container">
         <h2>Continue to Telegram</h2>
-        <p class="section-intro">
-          Explore the page, then continue to our channel.
-        </p>
+        <p>Explore the page, then join our channel.</p>
 
-        <!-- Adsterra banner placement 1 -->
+        <!-- Banner placement 1: existing code -->
+        <div class="ad-label">Advertisement</div>
         <div class="ad-slot">
           <script>
             atOptions = {
@@ -320,31 +215,28 @@
           <script src="https://bauval.org/22/5812fabf708823d47e85c2f16306e7c7"></script>
         </div>
 
-        <!-- Adsterra banner placement 2 -->
+        <!-- Banner placement 2: replace with a separate code from Adsterra -->
+        <div class="ad-label">Advertisement</div>
         <div class="ad-slot">
-          <script>
-            atOptions = {
-              'key': '5812fabf708823d47e85c2f16306e7c7',
-              'format': 'iframe',
-              'height': 60,
-              'width': 468,
-              'params': {}
-            };
-          </script>
-          <script src="https://bauval.org/22/5812fabf708823d47e85c2f16306e7c7"></script>
+          <!-- Add your second, unique Adsterra banner code here.
+               Do not duplicate the first unit's code. -->
         </div>
 
-        <div class="bottom-join">
+        <!-- Optional additional placements: add unique approved ad codes here -->
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-slot">
+          <!-- Add a third unique approved ad code here if available. -->
+        </div>
+
+        <div class="bottom-join" id="join">
           <h2>Ready to Join?</h2>
-          <p>Open our Telegram channel below.</p>
+          <p>Tap below to open our Telegram channel.</p>
 
-          <!-- Original Telegram invite link preserved -->
-          <a
-            class="button button-small"
-            href="https://t.me/+ThzXE_l-eJs4Yjk9"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <!-- Original Telegram invite URL preserved -->
+          <a class="btn btn-small"
+             href="https://t.me/+ThzXE_l-eJs4Yjk9"
+             target="_blank"
+             rel="noopener noreferrer">
             ✈ Join Now
           </a>
         </div>
@@ -354,13 +246,11 @@
 
   <footer class="container footer">
     <p>Independent channel landing page.</p>
-    <a href="#top">Back to top ↑</a>
+    <a href="#top" style="color:#8dcfff;">Back to top ↑</a>
   </footer>
 
-  <!-- Persistent shortcut to the Telegram section -->
-  <a class="sticky-join" href="#continue">
-    ↓ Join Now
-  </a>
+  <!-- Fixed button scrolls to the bottom Join Now button -->
+  <a class="sticky-join" href="#join">↓ Join Now</a>
 
 </body>
 </html>
