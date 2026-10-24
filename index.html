@@ -9,14 +9,21 @@
   <title>Join Our Telegram Channel</title>
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
+    }
 
     body {
       font-family: Arial, sans-serif;
-      background: #080d18;
       color: #f5f7ff;
+      background: #080d18;
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -77,13 +84,13 @@
 
     .btn {
       display: inline-flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       gap: 7px;
-      border: 0;
-      border-radius: 999px;
       padding: 10px 17px;
       margin: 5px;
+      border: 0;
+      border-radius: 999px;
       background: #229ed9;
       color: #fff;
       font-size: 14px;
@@ -98,11 +105,6 @@
       transform: translateY(-2px);
     }
 
-    .btn-small {
-      padding: 10px 16px;
-      font-size: 13px;
-    }
-
     .ads-section {
       padding: 38px 0 90px;
       background: #0c1321;
@@ -111,7 +113,7 @@
 
     .ad-label {
       margin: 18px 0 5px;
-      color: #7e91ab;
+      color: #8190a8;
       font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
@@ -119,12 +121,12 @@
 
     .ad-slot {
       width: 100%;
-      min-height: 80px;
+      min-height: 90px;
       margin: 8px auto 20px;
-      padding: 8px 0;
+      padding: 12px 0;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       overflow-x: auto;
       overflow-y: hidden;
       border: 1px solid #22334a;
@@ -133,8 +135,10 @@
     }
 
     .ad-slot iframe {
+      display: block;
+      flex: 0 0 auto;
+      max-width: none;
       border: 0;
-      flex-shrink: 0;
     }
 
     .bottom-join {
@@ -151,8 +155,8 @@
 
     .footer {
       padding: 22px 12px 85px;
-      font-size: 12px;
       color: #8190a8;
+      font-size: 12px;
     }
 
     .footer a {
@@ -170,7 +174,7 @@
       padding: 10px 19px;
       border-radius: 999px;
       background: #229ed9;
-      color: #fff;
+      color: white;
       text-decoration: none;
       font-size: 13px;
       font-weight: 700;
@@ -178,8 +182,14 @@
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes float {
@@ -188,10 +198,21 @@
     }
 
     @media (max-width: 480px) {
-      .hero { min-height: 72vh; }
-      .card { padding: 26px 15px; }
-      .ad-slot { justify-content: flex-start; }
-      .bottom-join { padding: 22px 12px; }
+      .hero {
+        min-height: 72vh;
+      }
+
+      .card {
+        padding: 26px 15px;
+      }
+
+      .ad-slot {
+        justify-content: flex-start;
+      }
+
+      .bottom-join {
+        padding: 22px 12px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -225,7 +246,6 @@
             directly on Telegram.
           </p>
 
-          <!-- Top button scrolls down -->
           <a class="btn" href="#continue">↓ Join Now</a>
 
           <p style="font-size:12px; margin:12px 0 0;">
@@ -240,7 +260,7 @@
         <h2>Continue to Telegram</h2>
         <p>Explore the page, then join our channel.</p>
 
-        <!-- AD SLOT 1: Existing Adsterra banner -->
+        <!-- AD SECTION 1 -->
         <div class="ad-label">Advertisement</div>
         <div class="ad-slot">
           <script>
@@ -255,21 +275,43 @@
           <script src="https://bauval.org/22/5812fabf708823d47e85c2f16306e7c7"></script>
         </div>
 
-        <!-- AD SLOT 2: Insert a separate approved ad code here -->
-        <div class="ad-label"><script data-cfasync="false" src="https://abscloud.org/1/9c4f000fb230f333d9885ed2b281efb1"></script></div>
-        <div class="ad-slot" id="ad-slot-2"></div>
+        <!-- AD SECTION 2 -->
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-slot">
+          <script>
+            atOptions = {
+              'key': '5812fabf708823d47e85c2f16306e7c7',
+              'format': 'iframe',
+              'height': 60,
+              'width': 468,
+              'params': {}
+            };
+          </script>
+          <script src="https://bauval.org/22/5812fabf708823d47e85c2f16306e7c7"></script>
+        </div>
 
-        <!-- AD SLOT 3: Insert another separate approved ad code here -->
-        <div class="ad-label"><script data-cfasync="false" src="https://abscloud.org/1/9c4f000fb230f333d9885ed2b281efb1"></script></div>
-        <div class="ad-slot" id="ad-slot-3"></div>
+        <!-- AD SECTION 3 -->
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-slot">
+          <script>
+            atOptions = {
+              'key': '5812fabf708823d47e85c2f16306e7c7',
+              'format': 'iframe',
+              'height': 60,
+              'width': 468,
+              'params': {}
+            };
+          </script>
+          <script src="https://bauval.org/22/5812fabf708823d47e85c2f16306e7c7"></script>
+        </div>
 
-        <!-- Corrected bottom join button -->
+        <!-- TELEGRAM JOIN -->
         <div class="bottom-join" id="join">
           <h2>Ready to Join?</h2>
           <p>Tap below to open our Telegram channel.</p>
 
           <a
-            class="btn btn-small"
+            class="btn"
             href="https://t.me/+ThzXE_l-eJs4Yjk9"
             target="_blank"
             rel="noopener noreferrer"
