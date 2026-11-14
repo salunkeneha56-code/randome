@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,16 +28,16 @@
     }
 
     .container {
-      width: min(94%, 720px);
+      width: min(94%, 640px);
       margin: auto;
       text-align: center;
     }
 
     .hero {
-      min-height: 78vh;
+      min-height: 68vh;
       display: grid;
       place-items: center;
-      padding: 38px 0;
+      padding: 32px 0;
       background:
         radial-gradient(ellipse at top, #17466c, transparent 65%),
         #080d18;
@@ -67,13 +66,13 @@
     }
 
     h1 {
-      font-size: clamp(27px, 6vw, 40px);
+      font-size: clamp(26px, 6vw, 38px);
       line-height: 1.2;
       margin-bottom: 12px;
     }
 
     h2 {
-      font-size: 23px;
+      font-size: 22px;
       margin-bottom: 8px;
     }
 
@@ -87,13 +86,13 @@
       justify-content: center;
       align-items: center;
       gap: 7px;
-      padding: 10px 17px;
-      margin: 5px;
+      padding: 12px 24px;
+      margin: 6px;
       border: 0;
       border-radius: 999px;
       background: #229ed9;
       color: #fff;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 700;
       text-decoration: none;
       cursor: pointer;
@@ -106,79 +105,60 @@
     }
 
     .ads-section {
-      padding: 38px 0 90px;
+      padding: 32px 0 60px;
       background: #0c1321;
       scroll-margin-top: 16px;
     }
 
     .ad-label {
-      margin: 18px 0 5px;
+      margin: 14px 0 6px;
       color: #8190a8;
       font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
     }
 
+    /* Mobile-friendly centered container for 300x250 */
     .ad-slot {
       width: 100%;
-      min-height: 90px;
-      margin: 8px auto 20px;
-      padding: 12px 0;
+      max-width: 336px;
+      min-height: 266px;
+      margin: 8px auto 24px;
+      padding: 8px;
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow-x: auto;
-      overflow-y: hidden;
       border: 1px solid #22334a;
-      border-radius: 10px;
+      border-radius: 12px;
       background: #101b2b;
     }
 
     .ad-slot iframe {
       display: block;
-      flex: 0 0 auto;
-      max-width: none;
+      max-width: 100%;
       border: 0;
     }
 
     .bottom-join {
-      margin-top: 24px;
-      padding: 24px 14px;
+      margin-top: 20px;
+      padding: 26px 16px;
       border: 1px solid #29415e;
       border-radius: 17px;
       background: linear-gradient(145deg, #172f4b, #101c2e);
     }
 
     .bottom-join p {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .footer {
-      padding: 22px 12px 85px;
+      padding: 22px 12px 40px;
       color: #8190a8;
       font-size: 12px;
     }
 
     .footer a {
       color: #8dcfff;
-    }
-
-    .sticky-join {
-      position: fixed;
-      z-index: 100;
-      left: 50%;
-      bottom: 12px;
-      transform: translateX(-50%);
-      display: inline-block;
-      white-space: nowrap;
-      padding: 10px 19px;
-      border-radius: 999px;
-      background: #229ed9;
-      color: white;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 700;
-      box-shadow: 0 5px 22px #0009;
     }
 
     @keyframes fadeUp {
@@ -197,24 +177,6 @@
       50% { transform: translateY(-5px); }
     }
 
-    @media (max-width: 480px) {
-      .hero {
-        min-height: 72vh;
-      }
-
-      .card {
-        padding: 26px 15px;
-      }
-
-      .ad-slot {
-        justify-content: flex-start;
-      }
-
-      .bottom-join {
-        padding: 22px 12px;
-      }
-    }
-
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation: none !important;
@@ -224,7 +186,7 @@
     }
   </style>
 
-  <!-- Existing popup script, included once -->
+  <!-- Existing Popunder script -->
   <script
     data-cfasync="false"
     src="https://abscloud.org/1/9c4f000fb230f333d9885ed2b281efb1">
@@ -246,10 +208,10 @@
             directly on Telegram.
           </p>
 
-          <a class="btn" href="#continue">↓ Join Now</a>
+          <a class="btn" href="#continue">↓ Continue to Channel</a>
 
           <p style="font-size:12px; margin:12px 0 0;">
-            Continue below to access our channel.
+            Tap above to unlock the channel invite link.
           </p>
         </div>
       </div>
@@ -257,52 +219,22 @@
 
     <section class="ads-section" id="continue">
       <div class="container">
-        <h2>Continue to Telegram</h2>
-        <p>Explore the page, then join our channel.</p>
+        <h2>Channel Access</h2>
+        <p>Your invite link is ready below.</p>
 
-        <!-- AD SECTION 1 -->
+        <!-- SINGLE MOBILE-FRIENDLY 300x250 BANNER -->
         <div class="ad-label">Advertisement</div>
         <div class="ad-slot">
-          <script>
-            atOptions = {
-              'key': '5812fabf708823d47e85c2f16306e7c7',
-              'format': 'iframe',
-              'height': 60,
-              'width': 468,
-              'params': {}
-            };
-          </script>
-          <script src="https://bauval.org/22/5812fabf708823d47e85c2f16306e7c7"></script>
-        </div>
-
-        <!-- AD SECTION 2 -->
-        <div class="ad-label">Advertisement</div>
-        <div class="ad-slot">
-          <script>
-            atOptions = {
-              'key': '5812fabf708823d47e85c2f16306e7c7',
-              'format': 'iframe',
-              'height': 60,
-              'width': 468,
-              'params': {}
-            };
-          </script>
-          <script src="https://bauval.org/22/5812fabf708823d47e85c2f16306e7c7"></script>
-        </div>
-
-        <!-- AD SECTION 3 -->
-        <div class="ad-label">Advertisement</div>
-        <div class="ad-slot">
-          <script>
-            atOptions = {
-              'key': '5812fabf708823d47e85c2f16306e7c7',
-              'format': 'iframe',
-              'height': 60,
-              'width': 468,
-              'params': {}
-            };
-          </script>
-          <script src="https://bauval.org/22/5812fabf708823d47e85c2f16306e7c7"></script>
+         <script>
+  atOptions = {
+    'key' : '9c6c3e50ac5f971f0129d02eb79e599f',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/9c6c3e50ac5f971f0129d02eb79e599f"></script>
         </div>
 
         <!-- TELEGRAM JOIN -->
@@ -326,8 +258,7 @@
     <a href="#top">Back to top ↑</a>
   </footer>
 
-  <!-- Floating button scrolls to the bottom join card -->
-  <a class="sticky-join" href="#join">↓ Join Now</a>
+  <script data-cfasync="false" src="https://bauval.org/14/d84d1c9cfa8723b95ac9e53c82cd8913"></script>
 
 </body>
 </html>
